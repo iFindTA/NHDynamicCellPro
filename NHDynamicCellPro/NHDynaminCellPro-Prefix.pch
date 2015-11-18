@@ -1,0 +1,19 @@
+//
+//  NHDynaminCellPro-Prefix.pch
+//  NHDynamicCellPro
+//
+//  Created by hu jiaju on 15/11/18.
+//  Copyright © 2015年 hu jiaju. All rights reserved.
+//
+
+#ifndef NHDynaminCellPro_Prefix_pch
+#define NHDynaminCellPro_Prefix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#define MAS_SHORTHAND
+#import "Masonry.h"
+#define MAS_SHORTHAND_GLOBALS
+
+#endif /* NHDynaminCellPro_Prefix_pch */
