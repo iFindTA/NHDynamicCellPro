@@ -36,7 +36,6 @@ static const NSString *constString = @"相声（Crosstalk），一种民间说�
     _tableView.rowHeight = UITableViewAutomaticDimension;
     _tableView.estimatedRowHeight = 80;
     [self.view addSubview:_tableView];
-    
 }
 
 - (void)didReceiveMemoryWarning {
