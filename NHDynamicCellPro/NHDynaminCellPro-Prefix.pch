@@ -15,5 +15,6 @@
 #define MAS_SHORTHAND
 #import "Masonry.h"
 #define MAS_SHORTHAND_GLOBALS
+#import "PBToolKits.h"
 
 #endif /* NHDynaminCellPro_Prefix_pch */

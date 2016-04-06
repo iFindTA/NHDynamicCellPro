@@ -13,5 +13,53 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "NHDynamicCellPro/NHCodeDynamicCell.m"
+            timestampString = "481545382.083013"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "47"
+            endingLineNumber = "47"
+            landmarkName = "-layoutSubviews"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "-[NHCodeDynamicCell layoutSubviews]"
+                  moduleName = "NHDynamicCellPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nanhujiaju/Desktop/PullBearsFolder/demos/NHDynamicCellPro/NHDynamicCellPro/NHCodeDynamicCell.m"
+                  timestampString = "481543653.760808"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "53"
+                  endingLineNumber = "53"
+                  offsetFromSymbolStart = "292">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__35-[NHCodeDynamicCell layoutSubviews]_block_invoke.110"
+                  moduleName = "NHDynamicCellPro"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/nanhujiaju/Desktop/PullBearsFolder/demos/NHDynamicCellPro/NHDynamicCellPro/NHCodeDynamicCell.m"
+                  timestampString = "481543653.760918"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "52">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

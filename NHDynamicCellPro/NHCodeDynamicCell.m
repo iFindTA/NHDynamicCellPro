@@ -12,6 +12,7 @@
 
 - (void)awakeFromNib {
     // Initialization code
+    [self _initSetup];
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -44,27 +45,24 @@
 - (void)layoutSubviews {
     [super layoutSubviews];
     
-    __weak typeof(&* self) weakSelf = self;
-    
-    [self.contentView makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(self.top).with.offset(5);
-        make.left.equalTo(self.left).with.offset(5);
-        make.right.equalTo(self.right).with.offset(-5);
-        make.bottom.equalTo(self.bottom).with.offset(5);
-    }];
-    
+    weakify(self)
     [_label makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.contentView.top).with.offset(15);
-        make.left.equalTo(weakSelf.contentView.left).with.offset(100);
-        make.right.equalTo(weakSelf.contentView.right).with.offset(-50);
+        strongify(self)
+        make.top.equalTo(self.contentView).offset(15);
+        make.left.equalTo(self.contentView).offset(100);
+        make.right.equalTo(self.contentView).offset(-50);
+        make.bottom.mas_equalTo(self.subLabel.mas_top).offset(20);
+        //make.height.mas_greaterThanOrEqualTo(@20).priorityHigh(1000);
     }];
     
     [_subLabel makeConstraints:^(MASConstraintMaker *make) {
-        make.top.equalTo(weakSelf.label.mas_bottom).with.offset(20);
-        make.left.equalTo(weakSelf.contentView.left).with.offset(50);
-        make.right.equalTo(weakSelf.contentView.right).with.offset(-100);
-        make.bottom.equalTo(weakSelf.contentView.bottom).with.offset(-10);
+        strongify(self)
+        make.top.mas_equalTo(self.label.mas_bottom).offset(20).priorityLow(998);
+        make.left.equalTo(self.contentView).offset(50);
+        make.right.equalTo(self.contentView).offset(-100);
+        make.bottom.equalTo(self.contentView.mas_bottom).offset(-10).priorityLow(998);
     }];
+    
 }
 
 //- (void)updateConstraints {
@@ -101,6 +99,9 @@
     [self.contentView addSubview:self.label];
     [self.contentView addSubview:self.subLabel];
 //    self.contentView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    self.label.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 150;
+    self.subLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 150;
 }
 
 - (UILabel *)label {
@@ -109,7 +110,6 @@
         _label = [[UILabel alloc] init];
         _label.font = font;
         _label.numberOfLines = 0;
-//        _label.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 150 ;
     }
     return _label;
 }
@@ -120,7 +120,6 @@
         _subLabel = [[UILabel alloc] init];
         _subLabel.font = font;
         _subLabel.numberOfLines = 0;
-//        _subLabel.preferredMaxLayoutWidth = [UIScreen mainScreen].bounds.size.width - 150 ;
     }
     return _subLabel;
 }

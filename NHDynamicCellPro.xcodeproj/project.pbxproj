@@ -20,7 +20,7 @@
 		6088BAE31BEC594600356683 /* NHDynamicCellProUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6088BAE21BEC594600356683 /* NHDynamicCellProUITests.m */; };
 		6088BAF61BEC78A600356683 /* NHPropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6088BAF41BEC78A600356683 /* NHPropertyCell.m */; };
 		6088BAF71BEC78A600356683 /* NHPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6088BAF51BEC78A600356683 /* NHPropertyCell.xib */; };
-		888604E1659956E290DCEA9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 85A28CABBA05E48FC4EE9759 /* libPods.a */; };
+		C422FED71ECC221FCD1A7DE9 /* libPods-NHDynamicCellPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F0F3B7C0FA9469DA302659 /* libPods-NHDynamicCellPro.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,9 +67,9 @@
 		6088BAF31BEC78A600356683 /* NHPropertyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHPropertyCell.h; sourceTree = "<group>"; };
 		6088BAF41BEC78A600356683 /* NHPropertyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHPropertyCell.m; sourceTree = "<group>"; };
 		6088BAF51BEC78A600356683 /* NHPropertyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NHPropertyCell.xib; sourceTree = "<group>"; };
-		85A28CABBA05E48FC4EE9759 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		8A9360B19B16AA98EA139F5D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		F86024FBF6A4481D8C506C11 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AEDB2594F68857F19F00C068 /* Pods-NHDynamicCellPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHDynamicCellPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-NHDynamicCellPro/Pods-NHDynamicCellPro.release.xcconfig"; sourceTree = "<group>"; };
+		D0BED1610A95B45470308C0D /* Pods-NHDynamicCellPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHDynamicCellPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NHDynamicCellPro/Pods-NHDynamicCellPro.debug.xcconfig"; sourceTree = "<group>"; };
+		D7F0F3B7C0FA9469DA302659 /* libPods-NHDynamicCellPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NHDynamicCellPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,7 +77,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				888604E1659956E290DCEA9D /* libPods.a in Frameworks */,
+				C422FED71ECC221FCD1A7DE9 /* libPods-NHDynamicCellPro.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,23 +98,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		19D0820AB1E907658F14A65B /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				F86024FBF6A4481D8C506C11 /* Pods.debug.xcconfig */,
-				8A9360B19B16AA98EA139F5D /* Pods.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4D4B3CFB1DEF939136442B17 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				85A28CABBA05E48FC4EE9759 /* libPods.a */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		6069BA681BFC1D6D00DC129D /* XIBS */ = {
 			isa = PBXGroup;
 			children = (
@@ -145,8 +128,8 @@
 				6088BAD61BEC594600356683 /* NHDynamicCellProTests */,
 				6088BAE11BEC594600356683 /* NHDynamicCellProUITests */,
 				6088BABB1BEC594500356683 /* Products */,
-				19D0820AB1E907658F14A65B /* Pods */,
-				4D4B3CFB1DEF939136442B17 /* Frameworks */,
+				A66B28C13934BAFAC20A8DA6 /* Pods */,
+				C4FC4E61514F6E564537E328 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,6 +188,23 @@
 			path = NHDynamicCellProUITests;
 			sourceTree = "<group>";
 		};
+		A66B28C13934BAFAC20A8DA6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D0BED1610A95B45470308C0D /* Pods-NHDynamicCellPro.debug.xcconfig */,
+				AEDB2594F68857F19F00C068 /* Pods-NHDynamicCellPro.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		C4FC4E61514F6E564537E328 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7F0F3B7C0FA9469DA302659 /* libPods-NHDynamicCellPro.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -212,12 +212,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6088BAE71BEC594600356683 /* Build configuration list for PBXNativeTarget "NHDynamicCellPro" */;
 			buildPhases = (
-				F705BA602551D13A21389D1D /* Check Pods Manifest.lock */,
+				0046E3E1A9D4B506E1723D1F /* 📦 Check Pods Manifest.lock */,
 				6088BAB61BEC594500356683 /* Sources */,
 				6088BAB71BEC594500356683 /* Frameworks */,
 				6088BAB81BEC594500356683 /* Resources */,
-				40A0DFC6A97BD2766259C8FB /* Embed Pods Frameworks */,
-				52C2BDEF7EDE1E53767CE26F /* Copy Pods Resources */,
+				A94B46F373B7C537128CEED6 /* 📦 Embed Pods Frameworks */,
+				CEE75920A8A3B04D1F6B719C /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -335,49 +335,49 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		40A0DFC6A97BD2766259C8FB /* Embed Pods Frameworks */ = {
+		0046E3E1A9D4B506E1723D1F /* 📦 Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-			name = "Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		52C2BDEF7EDE1E53767CE26F /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		F705BA602551D13A21389D1D /* Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Check Pods Manifest.lock";
+			name = "📦 Check Pods Manifest.lock";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A94B46F373B7C537128CEED6 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NHDynamicCellPro/Pods-NHDynamicCellPro-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEE75920A8A3B04D1F6B719C /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-NHDynamicCellPro/Pods-NHDynamicCellPro-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -532,7 +532,7 @@
 		};
 		6088BAE81BEC594600356683 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F86024FBF6A4481D8C506C11 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = D0BED1610A95B45470308C0D /* Pods-NHDynamicCellPro.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -547,7 +547,7 @@
 		};
 		6088BAE91BEC594600356683 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8A9360B19B16AA98EA139F5D /* Pods.release.xcconfig */;
+			baseConfigurationReference = AEDB2594F68857F19F00C068 /* Pods-NHDynamicCellPro.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

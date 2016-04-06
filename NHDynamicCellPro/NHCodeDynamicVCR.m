@@ -16,6 +16,8 @@ static const NSString *constString = @"相声（Crosstalk），一种民间说�
 @property (nullable, nonatomic, strong) NSMutableArray *dataSource;
 @property (nonatomic, strong, nullable) UITableView *tableView;
 
+@property (nullable, nonatomic, strong) NHCodeDynamicCell *propertyCell;
+
 @end
 
 @implementation NHCodeDynamicVCR
@@ -36,6 +38,9 @@ static const NSString *constString = @"相声（Crosstalk），一种民间说�
     _tableView.rowHeight = UITableViewAutomaticDimension;
     _tableView.estimatedRowHeight = 80;
     [self.view addSubview:_tableView];
+    
+    // 初始化 prototypeCell 以便复用
+    _propertyCell = [_tableView dequeueReusableCellWithIdentifier:@"codeCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -70,8 +75,33 @@ static const NSString *constString = @"相声（Crosstalk），一种民间说�
     return _dataSource.count;
 }
 
+- (CGFloat)tableView:(UITableView *)tableView estimatedHeightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 80;
+}
+
+- (CGFloat)calculateHeightForCell:(NHCodeDynamicCell *)cell {
+    [cell setNeedsLayout];
+    [cell layoutIfNeeded];
+    CGSize size = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+    return size.height + 1.0f;
+}
+
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return UITableViewAutomaticDimension;
+    
+    NHCodeDynamicCell *cell = _propertyCell;
+    NSString *info = [_dataSource objectAtIndex:[indexPath row]];
+    cell.label.text = info;
+    cell.subLabel.text = info;
+    CGFloat height__ = [self calculateHeightForCell:cell];
+    return height__;
+    
+//    if (PBIOS8_ABOVE) {
+//        height__ = UITableViewAutomaticDimension;
+//    }else{
+//        height__ = 80;
+//    }
+//    
+//    return height__;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -81,14 +111,18 @@ static const NSString *constString = @"相声（Crosstalk），一种民间说�
         cell = [[NHCodeDynamicCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:identifier];
         cell.selectionStyle = UITableViewCellSelectionStyleNone;
     }
-    [cell setNeedsLayout];
-    [cell layoutIfNeeded];
+    
+    //[cell setNeedsLayout];
+    //[cell layoutIfNeeded];
+    
 //    [cell setNeedsUpdateConstraints];
 //    [cell updateConstraintsIfNeeded];
     NSString *info = [_dataSource objectAtIndex:[indexPath row]];
     //    NSLog(@"info :%@",info);
-    cell.label.text = info;
-    cell.subLabel.text = info;
+    cell.label.text = info;[cell.label sizeToFit];
+    cell.subLabel.text = info;[cell.subLabel sizeToFit];
+    
+    
     
     return cell;
 }
