@@ -20,6 +20,8 @@
 		6088BAE31BEC594600356683 /* NHDynamicCellProUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6088BAE21BEC594600356683 /* NHDynamicCellProUITests.m */; };
 		6088BAF61BEC78A600356683 /* NHPropertyCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6088BAF41BEC78A600356683 /* NHPropertyCell.m */; };
 		6088BAF71BEC78A600356683 /* NHPropertyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6088BAF51BEC78A600356683 /* NHPropertyCell.xib */; };
+		609B2CA11CB60601002675F5 /* NHOpenCloseVCR.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B2CA01CB60601002675F5 /* NHOpenCloseVCR.m */; };
+		609B2CA41CB60618002675F5 /* NHOpenCloseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 609B2CA31CB60618002675F5 /* NHOpenCloseCell.m */; };
 		C422FED71ECC221FCD1A7DE9 /* libPods-NHDynamicCellPro.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F0F3B7C0FA9469DA302659 /* libPods-NHDynamicCellPro.a */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,10 @@
 		6088BAF31BEC78A600356683 /* NHPropertyCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHPropertyCell.h; sourceTree = "<group>"; };
 		6088BAF41BEC78A600356683 /* NHPropertyCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHPropertyCell.m; sourceTree = "<group>"; };
 		6088BAF51BEC78A600356683 /* NHPropertyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NHPropertyCell.xib; sourceTree = "<group>"; };
+		609B2C9F1CB60601002675F5 /* NHOpenCloseVCR.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHOpenCloseVCR.h; sourceTree = "<group>"; };
+		609B2CA01CB60601002675F5 /* NHOpenCloseVCR.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHOpenCloseVCR.m; sourceTree = "<group>"; };
+		609B2CA21CB60618002675F5 /* NHOpenCloseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NHOpenCloseCell.h; sourceTree = "<group>"; };
+		609B2CA31CB60618002675F5 /* NHOpenCloseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NHOpenCloseCell.m; sourceTree = "<group>"; };
 		AEDB2594F68857F19F00C068 /* Pods-NHDynamicCellPro.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHDynamicCellPro.release.xcconfig"; path = "Pods/Target Support Files/Pods-NHDynamicCellPro/Pods-NHDynamicCellPro.release.xcconfig"; sourceTree = "<group>"; };
 		D0BED1610A95B45470308C0D /* Pods-NHDynamicCellPro.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHDynamicCellPro.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NHDynamicCellPro/Pods-NHDynamicCellPro.debug.xcconfig"; sourceTree = "<group>"; };
 		D7F0F3B7C0FA9469DA302659 /* libPods-NHDynamicCellPro.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NHDynamicCellPro.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -150,6 +156,7 @@
 				6088BAC11BEC594500356683 /* AppDelegate.m */,
 				6088BAC31BEC594500356683 /* ViewController.h */,
 				6088BAC41BEC594500356683 /* ViewController.m */,
+				609B2C9E1CB605DD002675F5 /* OpenClose */,
 				6069BA691BFC1D7400DC129D /* CODES */,
 				6069BA681BFC1D6D00DC129D /* XIBS */,
 				6088BAC61BEC594500356683 /* Main.storyboard */,
@@ -186,6 +193,17 @@
 				6088BAE41BEC594600356683 /* Info.plist */,
 			);
 			path = NHDynamicCellProUITests;
+			sourceTree = "<group>";
+		};
+		609B2C9E1CB605DD002675F5 /* OpenClose */ = {
+			isa = PBXGroup;
+			children = (
+				609B2C9F1CB60601002675F5 /* NHOpenCloseVCR.h */,
+				609B2CA01CB60601002675F5 /* NHOpenCloseVCR.m */,
+				609B2CA21CB60618002675F5 /* NHOpenCloseCell.h */,
+				609B2CA31CB60618002675F5 /* NHOpenCloseCell.m */,
+			);
+			name = OpenClose;
 			sourceTree = "<group>";
 		};
 		A66B28C13934BAFAC20A8DA6 /* Pods */ = {
@@ -391,6 +409,8 @@
 				6069BA641BFC1CA000DC129D /* NHXIBDynamicVCR.m in Sources */,
 				6088BAC51BEC594500356683 /* ViewController.m in Sources */,
 				6088BAC21BEC594500356683 /* AppDelegate.m in Sources */,
+				609B2CA41CB60618002675F5 /* NHOpenCloseCell.m in Sources */,
+				609B2CA11CB60601002675F5 /* NHOpenCloseVCR.m in Sources */,
 				6069BA671BFC1CB500DC129D /* NHCodeDynamicVCR.m in Sources */,
 				6088BAF61BEC78A600356683 /* NHPropertyCell.m in Sources */,
 				6088BABF1BEC594500356683 /* main.m in Sources */,

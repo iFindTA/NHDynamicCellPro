@@ -9,6 +9,7 @@
 #import "ViewController.h"
 #import "NHXIBDynamicVCR.h"
 #import "NHCodeDynamicVCR.h"
+#import "NHOpenCloseVCR.h"
 
 @interface ViewController ()
 
@@ -38,6 +39,14 @@
     [btn setTitle:@"Code Dynamic" forState:UIControlStateNormal];
     [btn addTarget:self action:@selector(codeDynamicEvent) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:btn];
+    
+    infoRect.origin.y += 70;
+    btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = infoRect;
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    [btn setTitle:@"Open/Close" forState:UIControlStateNormal];
+    [btn addTarget:self action:@selector(openCloseEvent) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:btn];
 }
 
 - (void)xibDynamicEvent {
@@ -49,6 +58,11 @@
 - (void)codeDynamicEvent {
     NHCodeDynamicVCR *labelVCR = [[NHCodeDynamicVCR alloc] init];
     [self.navigationController pushViewController:labelVCR animated:true];
+}
+
+- (void)openCloseEvent {
+    NHOpenCloseVCR *openVCR = [[NHOpenCloseVCR alloc] init];
+    [self.navigationController pushViewController:openVCR animated:true];
 }
 
 - (void)didReceiveMemoryWarning {
