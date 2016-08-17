@@ -556,7 +556,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/nanhujiaju/Desktop/PullBearsFolder/demos/NHDynamicCellPro/NHDynamicCellPro/NHDynaminCellPro-Prefix.pch";
+				GCC_PREFIX_HEADER = "$SRCROOT/NHDynamicCellPro/NHDynaminCellPro-Prefix.pch";
 				INFOPLIST_FILE = NHDynamicCellPro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -571,7 +571,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "/Users/nanhujiaju/Desktop/PullBearsFolder/demos/NHDynamicCellPro/NHDynamicCellPro/NHDynaminCellPro-Prefix.pch";
+				GCC_PREFIX_HEADER = "$SRCROOT/NHDynamicCellPro/NHDynaminCellPro-Prefix.pch";
 				INFOPLIST_FILE = NHDynamicCellPro/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
